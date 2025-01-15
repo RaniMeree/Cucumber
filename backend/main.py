@@ -100,6 +100,7 @@ class UserRegistration(BaseModel):
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "cucumber-pu5t-5gw03ozks-rani-merees-projects.vercel.app",
         "https://cucumber-six.vercel.app",
         "https://cucumber-238y2pdoq-rani-merees-projects.vercel.app",
         "https://cucumber-ckr93nlro-rani-merees-projects.vercel.app",
