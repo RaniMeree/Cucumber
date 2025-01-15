@@ -9,19 +9,21 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": { 
-        "distDir": "build",
-        "buildCommand": "npm run build --legacy-peer-deps"
+        "distDir": "build"
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "backend/main.py"
+      "dest": "/backend/main.py"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "build/$1"
+      "dest": "/index.html"
     }
   ]
 } 

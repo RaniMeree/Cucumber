@@ -57,7 +57,7 @@ os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)  # Set to DEBUG level for more detailed logs
-app = FastAPI(root_path="/api")
+app = FastAPI()
 
 SECRET_KEY = "your_secret_key"  # Replace with a secure key
 ALGORITHM = "HS256"
@@ -100,9 +100,9 @@ class UserRegistration(BaseModel):
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://*.vercel.app",
+        "https://cucumber-ckr93nlro-rani-merees-projects.vercel.app",
         "http://localhost:3000",
-        "https://localhost:3000"
+        # Add other origins as needed
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -232,7 +232,7 @@ async def get_user(db: Session, email: str):
 def get_user_by_email(db: Session, email: str):
     return db.query(User).filter(User.email == email).first()
 
-@app.post("/api/token")
+@app.post("/token")
 async def login_for_access_token(request: Request, form_data: OAuth2PasswordRequestForm = Depends()):
     print("1. Received login request")
     print("2. Headers:", dict(request.headers))
