@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './components/Home';
 import Signup from './components/Signup';
@@ -17,6 +17,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/login" element={<Login />} /> {/* Login Page */}
           <Route path="/signup" element={<Signup />} /> {/* Signup Page */}
           {/* Protected Home Route */}
