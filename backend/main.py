@@ -100,8 +100,7 @@ class UserRegistration(BaseModel):
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://cucumber-ckr93nlro-rani-merees-projects.vercel.app",  # Add your Vercel domain
-        "https://cucumber.vercel.app",  # Add any other variations of your domain
+        "https://*.vercel.app",  # This will match all Vercel deployments
         "http://localhost:3000",
         "https://localhost:3000",
         "http://localhost:8000",
@@ -114,7 +113,6 @@ app.add_middleware(
         "Authorization",
         "Accept",
         "Origin",
-        "ngrok-skip-browser-warning",
         "Access-Control-Allow-Origin"
     ],
 )
