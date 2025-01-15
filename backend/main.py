@@ -100,13 +100,21 @@ class UserRegistration(BaseModel):
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://cucumber-six.vercel.app",
+        "https://cucumber-238y2pdoq-rani-merees-projects.vercel.app",
         "https://cucumber-ckr93nlro-rani-merees-projects.vercel.app",
         "http://localhost:3000",
-        # Add other origins as needed
     ],
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],
+    allow_headers=[
+        "Content-Type",
+        "Authorization",
+        "Accept",
+        "Origin",
+        "Access-Control-Request-Method",
+        "Access-Control-Request-Headers"
+    ],
 )
 
 # Add an OPTIONS endpoint to handle preflight requests
@@ -1958,6 +1966,13 @@ async def process_food_image2(request: Request, image: UploadFile = File(...), a
 @app.options("/api/user-recipes/{user_id}/{recipe_id}")
 async def options_delete_recipe():
     return {"status": "ok"}
+
+@app.options("/{rest_of_path:path}")
+async def options_handler(rest_of_path: str):
+    return {
+        "status": "ok",
+        "path": rest_of_path
+    }
 
 if __name__ == "__main__":
     uvicorn.run(
