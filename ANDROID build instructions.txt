@@ -1,0 +1,121 @@
+npm install @capacitor/cli --save-dev --legacy-peer-deps
+
+npm install react@16.14.0 react-dom@16.14.0
+
+npx cap init
+npm install -D typescript --force
+npm cache clean --force
+npm install @capacitor/cli @capacitor/core --save-dev --force
+
+-----------------------------------
+create capacitor.config.ts
+
+import { CapacitorConfig } from '@capacitor/cli';
+
+const config: CapacitorConfig = {
+  appId: 'com.example.app',
+  appName: 'calorie-estimation-app',
+  webDir: 'build',
+  server: {
+    androidScheme: 'http'
+  }
+};
+
+export default config;
+
+-----------------------------------
+
+add these to AndroidManifest.xml
+
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+-----------------------------------
+npm install @capacitor/splash-screen
+
+-----------------------------------
+
+npm run build
+npx cap add android
+
+
+-----------------------------------
+
+update build.gradle
+add the below
+android {
+    defaultConfig {
+        applicationId "com.example.app"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+-----------------------------------
+Powershell
+
+$env:JAVA_HOME = "C:\Program Files\Java\jdk-17"
+
+
+
+-------------
+DIRECT THE TO HOME PAGE
+
+First, open your capacitor.config.ts (or capacitor.config.json) and add the server configuration:
+
+import { CapacitorConfig } from '@capacitor/cli';
+
+const config: CapacitorConfig = {
+  appId: 'com.your.app',
+  appName: 'YourAppName',
+  webDir: 'build',
+  server: {
+    url: 'https://ea3e-2001-2040-c00f-1be-00-2-49f4.ngrok-free.app/home',
+    cleartext: true
+  }
+};
+
+export default config;
+
+------------------
+2. Then, you need to allow cleartext traffic in your Android app. Create or modify the android/app/src/main/res/xml/network_security_config.xml:
+
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">ngrok-free.app</domain>
+    </domain-config>
+</network-security-config>
+
+------------------
+Update your android/app/src/main/AndroidManifest.xml to use this configuration:
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest ... >
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        ... >
+        ...
+    </application>
+</manifest>
+
+
+-----------------------------------
+After making changes
+
+npm run build
+npx cap sync
+cd android
+./gradlew clean
+./gradlew build
+cd..
+npx cap open android

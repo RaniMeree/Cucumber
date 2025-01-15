@@ -1,0 +1,7 @@
+
+--- Receipt #1 ---
+Milk x 3 @ 20.0 each: 60.0
+Meat x 2 @ 20.0 each: 40.0
+
+Total: 100.0
+--- End of Receipt ---

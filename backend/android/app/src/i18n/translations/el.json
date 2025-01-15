@@ -1,0 +1,18 @@
+{
+  "welcome": "Καλώς ήρθατε",
+  "calories_limit": "Όριο θερμίδων",
+  "consumed_today": "Καταναλώθηκε σήμερα",
+  "register_intake": "Καταχώρηση νέας πρόσληψης θερμίδων",
+  "capture_image": "Λήψη φωτογραφίας",
+  "upload_file": "Μεταφόρτωση αρχείου",
+  "manual_input": "Χειροκίνητη εισαγωγή",
+  "my_recipes": "Οι συνταγές μου",
+  "profile": "Προφίλ",
+  "logout": "Αποσύνδεση",
+  "input_from_recipes": "Εισαγωγή από Συνταγές",
+  "select_food": "Επιλογή Τροφίμου",
+  "next": "Επόμενο",
+  "cancel": "Ακύρωση",
+  "please_select_valid_food": "Παρακαλώ επιλέξτε έγκυρο τρόφιμο",
+  "close": "Κλείσιμο"
+} 

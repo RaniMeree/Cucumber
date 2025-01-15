@@ -1,0 +1,17 @@
+{
+    "12": {
+        "balance": 80.0,
+        "transactions": [
+            {
+                "date": "2024-10-26 16:38:23",
+                "type": "deposit",
+                "amount": 100.0
+            },
+            {
+                "date": "2024-10-26 16:38:32",
+                "type": "withdraw",
+                "amount": 20.0
+            }
+        ]
+    }
+}

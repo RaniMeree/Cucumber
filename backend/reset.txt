@@ -1,0 +1,2 @@
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'password123';
+FLUSH PRIVILEGES;

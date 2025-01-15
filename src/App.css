@@ -1,0 +1,2066 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 9999;
+
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.react-calendar {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto;
+  background: white;
+  border: none !important;
+  border-radius: 8px;
+  padding: 12px !important;
+}
+
+.react-calendar__tile {
+  padding: 0;
+  height: 100px;
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: none !important;
+  margin: 2px !important;
+  background-color: #f2f2f2 !important;
+  aspect-ratio: 1 !important;
+  border-radius: 8px !important;
+}
+
+.react-calendar__month-view__days__day {
+  position: relative;
+  background-color: #f2f2f2 !important;
+}
+
+/* Remove default calendar tile content styling */
+.react-calendar__tile abbr {
+  display: none;
+}
+
+/* Ensure the progress circle container takes full height */
+.react-calendar__tile > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2 !important;
+  transform: scale(0.8);
+}
+
+/* Today's cell highlight - more distinct color */
+.react-calendar__tile--now,
+.react-calendar__tile--now > div,
+.react-calendar__month-view__days__day--now {
+  background-color: #e0f2e9 !important; /* Softer mint green for today */
+}
+
+/* Weekend cells */
+.react-calendar__month-view__days__day--weekend {
+  background: #f5f5f5 !important;
+}
+
+/* Hover effect - slightly darker shade */
+.react-calendar__tile:hover {
+  background-color: #e8e8e8 !important;
+}
+
+.react-calendar__tile--active {
+  background: #329843;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-button {
+  padding: 10px;
+  background-color: #329843;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: #235122;
+}
+
+.login-message {
+  margin-top: 10px;
+  color: #d9534f;
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.signup-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.signup-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #329843;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signup-button:hover {
+  background-color: #235122;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: #000000;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+  z-index: 9999;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #8E8E93;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  width: 60px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item.active {
+  color: #34C759 !important;
+}
+
+.menu-item svg {
+  color: inherit;
+}
+
+.menu-item:hover,
+.menu-item.logout:hover,
+.menu-item.new-input:hover,
+.menu-item.history:hover,
+.menu-item.profile:hover,
+.menu-item.recipes:hover {
+  background: none;
+}
+
+.menu-item.new-input,
+.menu-item.history,
+.menu-item.profile,
+.menu-item.recipes,
+.menu-item.logout {
+  background: none;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  padding-bottom: 100px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.detect-food-section {
+  margin-top: 20px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.primary-button, .file-input {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #329843;
+  color: white;
+  text-align: center;
+  display: inline-block;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #329843;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin: 5px;
+  width: 180px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.primary-button:hover {
+  background-color: #267733;
+}
+
+.primary-button svg {
+  margin-right: 8px;
+}
+
+.file-input {
+  display: none;
+}
+
+.secondary-button {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.secondary-button:hover {
+  background-color: #5a6268;
+}
+
+.intake-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.intake-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.intake-form input {
+  
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.video-element {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* CalendarStyles.css */
+.react-calendar {
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.react-calendar__navigation button {
+  background-color: #329843 !important;
+  color: white !important;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.react-calendar__navigation__label {
+  background-color: #329843 !important;
+  padding: 8px 16px;
+  border-radius: 4px;
+  color: white !important;
+  font-weight: normal;
+}
+
+/* Hide the double arrow buttons */
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  display: none !important;
+}
+
+.react-calendar__tile {
+  
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.react-calendar__tile--active {
+  background-color: #329843;
+  color: white;
+}
+
+.react-calendar__tile--now {
+  background-color: #f0f8ff;
+}
+
+.react-calendar__tile:hover {
+  background-color: #e0e0e0;
+}
+
+#camera-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.camera-buttons {
+  
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px;
+}
+
+.small-button {
+  width: 100px; /* Smaller width */
+  padding: 6px; /* Smaller padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; /* Smaller font size */
+  text-align: center;
+  display: inline-block;
+}
+
+.red-button {
+  background-color: #dc3545; /* Red color */
+  color: white;
+}
+
+.profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile-form label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.profile-form input,
+.profile-form select {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.update-button,
+.home-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #329843;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%;
+}
+
+.update-button:hover,
+.home-button:hover {
+  background-color: #235122;
+}
+
+.update-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Global styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.form input,
+.form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #329843;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #235122;
+}
+
+.message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.processing-message {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.prediction-result {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+.prediction-result h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.prediction-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.readonly-input {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.intake-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .menu-list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu-item {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+
+  .welcome-message {
+    font-size: 8px;
+  }
+
+  /* Adjust calorie limit display */
+  .calorie-limit {
+    text-align: center;
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+
+  .main-content {
+    padding-bottom: 100px;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  .menu-list {
+    gap: 5px;
+  }
+
+  .menu-item {
+    font-size: 0.8em;
+    padding: 5px 10px;
+  }
+}
+
+/* Add these styles for better mobile form handling */
+.intake-form {
+  max-width: 100%;
+  padding: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.primary-button {
+  min-width: 120px;
+  padding: 10px;
+  margin: 5px;
+}
+
+/* Camera section mobile optimization */
+.camera-section {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.video-element {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+/* Prediction result mobile optimization */
+.prediction-result {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.prediction-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.hamburger-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  margin: 10px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px; /* Adjust based on your layout */
+  right: 10px; /* Adjust based on your layout */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.header-info {
+  padding-bottom: 20px; /* Add space below the logo */
+  text-align: center; /* Center align the text and logo */
+}
+
+.autocomplete-wrapper {
+  position: relative;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.autocomplete-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.autocomplete-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.recipe-name-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.ingredient-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2px;
+  padding: 0;
+  background: none;
+}
+
+.ingredient-row.header {
+  margin-bottom: 5px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.ingredient-row .form-group {
+  flex: 1;
+}
+
+.ingredient-row input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #ff3b30;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.remove-btn:hover {
+  color: #ff1a1a;
+}
+
+.calculator-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-row-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+.add-row-btn:hover {
+  background-color: #218838;
+}
+
+.calculator-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.ingredient-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: flex-end;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.calculator-icon-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #007bff;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.calculator-icon-btn:hover {
+  color: #0056b3;
+}
+
+.calories-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.mobile-button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.mobile-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Loading Screen Styles */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #329843;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Custom Alert Styles */
+.swal2-popup {
+  font-size: 1rem !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+}
+
+.swal2-title {
+  color: #333 !important;
+  font-size: 1.2rem !important;
+}
+
+.swal2-content {
+  color: #666 !important;
+}
+
+.swal2-confirm {
+  background-color: #329843 !important;
+  border-radius: 5px !important;
+}
+
+/* Alert Styles */
+.alert-message {
+  padding: 15px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 1.5;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Override default alert styles */
+.alert {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  padding: 15px 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  max-width: 400px !important;
+  margin: 20px auto !important;
+  line-height: 1.5 !important;
+  font-size: 14px !important;
+}
+
+.custom-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.custom-alert {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-alert p {
+  margin: 0 0 20px 0;
+  color: #333;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.custom-alert .primary-button {
+  background-color: #329843;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-alert .primary-button:hover {
+  background-color: #267733;
+}
+
+.slogan {
+  color: #329843; /* Green color */
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.menu-icon {
+  font-size: 36px; /* Keep icon size large */
+}
+
+.my-recipes-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.my-recipes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.recipes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.recipe-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.recipe-item:hover {
+  background: #eeeeee;
+}
+
+.recipe-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.recipe-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.recipe-calories {
+  color: #666;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background: rgba(220, 53, 69, 0.1);
+}
+
+/* Style for the Previous Day and Next Day buttons */
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button,
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  background-color: #329843 !important;  /* Green background */
+  color: white !important;
+}
+
+/* Style for the Previous Day and Next Day buttons on hover */
+.react-calendar__navigation__prev-button:hover,
+.react-calendar__navigation__next-button:hover,
+.react-calendar__navigation__prev2-button:hover,
+.react-calendar__navigation__next2-button:hover {
+  background-color: #267733 !important;  /* Darker green on hover */
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .menu-list {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .header-banner {
+  direction: rtl;
+}
+
+/* Add more RTL-specific styles as needed */
+
+.ingredients-form {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.ingredients-form h3 {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.ingredient-row input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background-color: #f8f8f8;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button-group button,
+.primary-button,
+.cancel-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.primary-button {
+  background-color: #34C759;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #ff3b30;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #2fb350;
+}
+
+.cancel-btn:hover {
+  background-color: #ff2d55;
+}
+
+.verification-link {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.verification-link:hover {
+  color: #0056b3;
+}
+
+/* Verification Form Styles */
+.verification-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  text-align: center;
+}
+
+.verification-form h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.verification-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.verification-form input:focus {
+  border-color: #329843;
+  outline: none;
+}
+
+.verification-form button {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #329843;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.verification-form button:hover {
+  background-color: #267733;
+}
+
+.verification-form button:last-child {
+  background-color: #6c757d;
+  margin-top: 10px;
+}
+
+.verification-form button:last-child:hover {
+  background-color: #5a6268;
+}
+
+.verification-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.verification-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.verification-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.login-link {
+  margin-top: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #329843;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.forgot-password-container {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-password-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.forgot-password-container input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.forgot-password-container button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.forgot-password-container button:hover {
+    background-color: #218838;
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.calorie-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+}
+
+.progress-ring-circle-bg {
+    stroke: #f3f3f3;
+    fill: none;
+    stroke-width: 7;
+}
+
+.progress-ring-circle {
+    stroke: #329843;
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.calorie-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.consumed {
+    font-size: 14px;
+    color: #666;
+}
+
+.calorie-dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.header-banner {
+  background-color: #000000;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.logo-text {
+  color: #4CAF50;
+}
+
+.welcome-section {
+  text-align: center;
+}
+
+.welcome-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.calorie-info {
+  font-size: 14px;
+  margin: 0;
+}
+
+.red-text {
+  color: red;
+}
+
+.progress-section {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-cell {
+  padding: 2px;
+  text-align: center;
+  vertical-align: middle;
+  height: 60px;
+  width: 60px;
+}
+
+.calendar-cell.today {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.calendar table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  margin: 20px auto;
+}
+
+.calendar th {
+  padding: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Add these styles for the calendar tiles */
+.react-calendar {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border: none !important;
+  border-radius: 0px;
+}
+
+.react-calendar__tile {
+  padding: 0;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.react-calendar__month-view__days__day {
+  position: relative;
+  background: transparent !important;
+}
+
+/* Remove default calendar tile content styling */
+.react-calendar__tile abbr {
+  display: none;
+}
+
+/* Ensure the progress circle container takes full height */
+.react-calendar__tile > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add hover effect */
+.react-calendar__tile:hover {
+  background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+/* Style for today's tile */
+.react-calendar__tile--now {
+  background-color: rgba(76, 175, 80, 0.1) !important;
+}
+
+/* Navigation buttons and month view styles */
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #267733;  /* Darker green on hover */
+}
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  display: none !important;
+}
+
+.react-calendar__month-view {
+  padding: 4px;
+}
+
+/* Ensure background color is applied to all possible cell states */
+.react-calendar__month-view__days__day,
+.react-calendar__month-view__days__day--weekend,
+.react-calendar__month-view__days__day--neighboringMonth {
+  background-color: #f2f2f2 !important;
+}
+
+.react-calendar__year-view__months__month,
+.react-calendar__decade-view__years__year {
+  color: #333; /* Set to a visible color */
+}
+
+.react-calendar__year-view__months__month:hover,
+.react-calendar__decade-view__years__year:hover {
+  background-color: #e0e0e0; /* Optional: Add a hover effect */
+}
+
+.react-calendar__year-view__months__month {
+  color: #333; /* Ensure text color is visible */
+  font-size: 16px; /* Adjust font size if needed */
+  background-color: transparent; /* Ensure background doesn't hide text */
+}
+
+.react-calendar__year-view__months__month:hover {
+  background-color: #e0e0e0; /* Optional: Add a hover effect */
+}
+
+/* Style for month names in year view */
+.react-calendar__year-view__months__month {
+  color: #333 !important; /* Force visible text color */
+  font-size: 16px !important;
+  background-color: transparent !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+/* Style for the month name text */
+.react-calendar__year-view__months__month abbr {
+  display: inline-block !important;
+  text-decoration: none !important;
+  color: #333 !important;
+}
+
+/* Hover effect */
+.react-calendar__year-view__months__month:hover {
+  background-color: #e0e0e0 !important;
+}
+
+/* Ensure the month view container is visible */
+.react-calendar__year-view__months {
+  display: grid !important;
+  visibility: visible !important;
+}
+
+/* Style for the year view container */
+.react-calendar__decade-view__years {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 10px !important;
+}
+
+/* Style for individual year items */
+.react-calendar__decade-view__years__year {
+  width: 100% !important;
+  padding: 8px !important;
+  margin: 2px 0 !important;
+  text-align: center !important;
+  background: none !important;
+  border: none !important;
+  color: #333 !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+}
+
+/* Hover effect for years */
+.react-calendar__decade-view__years__year:hover {
+  background-color: #e0e0e0 !important;
+}
+
+/* Active/selected year */
+.react-calendar__decade-view__years__year--selected {
+  background-color: #329843 !important;
+  color: white !important;
+}
+
+/* Style for the century/decade view container */
+.react-calendar__century-view__decades {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 10px !important;
+}
+
+/* Style for individual decade items */
+.react-calendar__century-view__decades__decade {
+  width: 100% !important;
+  padding: 8px !important;
+  margin: 2px 0 !important;
+  text-align: center !important;
+  background: none !important;
+  border: none !important;
+  color: #333 !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+}
+
+/* Hover effect for decades */
+.react-calendar__century-view__decades__decade:hover {
+  background-color: #e0e0e0 !important;
+}
+
+/* Active/selected decade */
+.react-calendar__century-view__decades__decade--selected {
+  background-color: #329843 !important;
+  color: white !important;
+}
+
+.nutrition-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.nutrition-item strong {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.nutrition-item small {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.recipe-card {
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-2px);
+}
+
+.recipe-actions button {
+  transition: opacity 0.2s ease;
+}
+
+.recipe-actions button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .recipe-nutrition {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .recipe-ingredients {
+    overflow-x: auto;
+  }
+}
+
+/* Input Options Grid */
+.input-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-option-button {
+  background: white;
+  border: none;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  min-height: 160px;
+}
+
+.input-option-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.input-option-button .input-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: #34C759; /* iOS-style green */
+}
+
+.input-option-button span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin-top: 8px;
+}
+
+/* Add subtle gradient backgrounds for each button */
+.input-option-button:nth-child(1) {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+}
+
+.input-option-button:nth-child(2) {
+  background: linear-gradient(135deg, #ffffff 0%, #fff0f9 100%);
+}
+
+.input-option-button:nth-child(3) {
+  background: linear-gradient(135deg, #ffffff 0%, #f2fff0 100%);
+}
+
+.input-option-button:nth-child(4) {
+  background: linear-gradient(135deg, #ffffff 0%, #fff9f0 100%);
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .input-options-grid {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .input-option-button {
+    padding: 16px;
+  }
+
+  .input-icon {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .input-option-button span {
+    font-size: 12px;
+  }
+}
+
+/* Hide the nutritional columns by default */
+.ingredient-row input[data-type="calories"],
+.ingredient-row input[data-type="carbs"],
+.ingredient-row input[data-type="protein"],
+.ingredient-row input[data-type="fats"] {
+  display: none;
+}
+
+/* Style the calculation results section */
+.calculation-details {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.calculation-details h4 {
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.nutrition-item {
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.nutrition-item strong {
+  display: block;
+  color: #329843;
+  font-size: 1.1em;
+  margin-bottom: 4px;
+}
+
+.nutrition-item span {
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Modal styles */
+.save-recipe-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 320px;
+  z-index: 1000;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.save-recipe-modal input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  background-color: #f8f8f8;
+}
+
+.save-recipe-modal .button-group {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for modal buttons */
+  gap: 10px;
+}
+
+.save-recipe-modal .button-group button {
+  flex: 1;
+}
+
+/* Ingredients section styles */
+.ingredients-section {
+  margin-top: 10px;
+}
+
+.ingredients-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  cursor: pointer;
+  color: #333;
+}
+
+.ingredients-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  font-size: 9px;
+}
+
+.ingredients-content.expanded {
+  max-height: 500px; /* Adjust based on your needs */
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.expanded {
+  transform: rotate(180deg);
+}
+
+/* Update the progress circle container */
+.react-calendar__tile > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2 !important;
+  transform: scale(0.8);
+}
+
+/* Update font sizes in the calendar */
+.react-calendar__navigation button {
+  font-size: 10px;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  font-size: 10px;
+}
+
+/* Adjust the day number and name size in CalorieProgress component */
+.calorie-progress-text {
+  font-size: 10px !important;
+}
+
+/* Make calendar cells wider */
+.react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  padding: 8px !important;
+}
+
+/* Ingredient table styles */
+.ingredient-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem; /* Smaller font size */
+}
+
+.ingredient-table th, .ingredient-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.ingredient-table th {
+  background-color: #f8f9fa;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .ingredient-table {
+    font-size: 0.7rem; /* Even smaller font size for mobile */
+  }
+
+  .ingredient-table th, .ingredient-table td {
+    padding: 6px; /* Reduce padding for mobile */
+  }
+}
+
+.favorite-star-button {
+  background: none;
+  border: none;
+  color: #FFD700; /* Gold color for the star */
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.favorite-star-button:hover {
+  transform: scale(1.1);
+}
+

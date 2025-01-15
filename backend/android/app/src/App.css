@@ -1,0 +1,1202 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  width: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 9999;
+
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.react-calendar {
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  text-align: center;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.react-calendar__tile--active {
+  background: #329843;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-button {
+  padding: 10px;
+  background-color: #329843;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-button:hover {
+  background-color: #235122;
+}
+
+.login-message {
+  margin-top: 10px;
+  color: #d9534f;
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+.signup-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.signup-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #329843;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signup-button:hover {
+  background-color: #235122;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: #000000;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+  z-index: 9999;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #8E8E93;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  width: 60px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item.active {
+  color: #34C759 !important;
+}
+
+.menu-item svg {
+  color: inherit;
+}
+
+.menu-item:hover,
+.menu-item.logout:hover,
+.menu-item.new-input:hover,
+.menu-item.history:hover,
+.menu-item.profile:hover,
+.menu-item.recipes:hover {
+  background: none;
+}
+
+.menu-item.new-input,
+.menu-item.history,
+.menu-item.profile,
+.menu-item.recipes,
+.menu-item.logout {
+  background: none;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detect-food-section {
+  margin-top: 20px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.primary-button, .file-input {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #329843;
+  color: white;
+  text-align: center;
+  display: inline-block;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #329843;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin: 5px;
+  width: 180px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.primary-button:hover {
+  background-color: #267733;
+}
+
+.primary-button svg {
+  margin-right: 8px;
+}
+
+.file-input {
+  display: none;
+}
+
+.secondary-button {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.secondary-button:hover {
+  background-color: #5a6268;
+}
+
+.intake-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.intake-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.intake-form input {
+  
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.video-element {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* CalendarStyles.css */
+.react-calendar {
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+.react-calendar__navigation {
+
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.react-calendar__navigation button {
+  background-color: #329843;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #267733;  /* Darker green on hover */
+}
+
+.react-calendar__tile {
+  
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.react-calendar__tile--active {
+  background-color: #329843;
+  color: white;
+}
+
+.react-calendar__tile--now {
+  background-color: #f0f8ff;
+}
+
+.react-calendar__tile:hover {
+  background-color: #e0e0e0;
+}
+
+#camera-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.camera-buttons {
+  
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px;
+}
+
+.small-button {
+  width: 100px; /* Smaller width */
+  padding: 6px; /* Smaller padding */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; /* Smaller font size */
+  text-align: center;
+  display: inline-block;
+}
+
+.red-button {
+  background-color: #dc3545; /* Red color */
+  color: white;
+}
+
+.profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile-form label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.profile-form input,
+.profile-form select {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.update-button,
+.home-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #329843;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%;
+}
+
+.update-button:hover,
+.home-button:hover {
+  background-color: #235122;
+}
+
+.update-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Global styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.form input,
+.form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #329843;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #235122;
+}
+
+.message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.processing-message {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.prediction-result {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+.prediction-result h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.prediction-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.readonly-input {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.intake-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .menu-list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu-item {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+
+  .welcome-message {
+    font-size: 8px;
+  }
+
+  /* Adjust calorie limit display */
+  .calorie-limit {
+    text-align: center;
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  .menu-list {
+    gap: 5px;
+  }
+
+  .menu-item {
+    font-size: 0.8em;
+    padding: 5px 10px;
+  }
+}
+
+/* Add these styles for better mobile form handling */
+.intake-form {
+  max-width: 100%;
+  padding: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.primary-button {
+  min-width: 120px;
+  padding: 10px;
+  margin: 5px;
+}
+
+/* Camera section mobile optimization */
+.camera-section {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.video-element {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+/* Prediction result mobile optimization */
+.prediction-result {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+}
+
+.prediction-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.hamburger-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  margin: 10px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px; /* Adjust based on your layout */
+  right: 10px; /* Adjust based on your layout */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.header-info {
+  padding-bottom: 20px; /* Add space below the logo */
+  text-align: center; /* Center align the text and logo */
+}
+
+.autocomplete-wrapper {
+  position: relative;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.autocomplete-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.autocomplete-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.calculator-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.ingredient-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: flex-end;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.calculator-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #dc3545;
+  margin: 10px;
+}
+
+.add-row-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+.add-row-btn:hover {
+  background-color: #218838;
+}
+
+.calculator-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.ingredient-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: flex-end;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.calculator-icon-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #007bff;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.calculator-icon-btn:hover {
+  color: #0056b3;
+}
+
+.calories-input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.mobile-button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+.mobile-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Loading Screen Styles */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #329843;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Custom Alert Styles */
+.swal2-popup {
+  font-size: 1rem !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+}
+
+.swal2-title {
+  color: #333 !important;
+  font-size: 1.2rem !important;
+}
+
+.swal2-content {
+  color: #666 !important;
+}
+
+.swal2-confirm {
+  background-color: #329843 !important;
+  border-radius: 5px !important;
+}
+
+/* Alert Styles */
+.alert-message {
+  padding: 15px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 1.5;
+  color: #333;
+  font-size: 14px;
+}
+
+/* Override default alert styles */
+.alert {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  padding: 15px 20px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  max-width: 400px !important;
+  margin: 20px auto !important;
+  line-height: 1.5 !important;
+  font-size: 14px !important;
+}
+
+.custom-alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.custom-alert {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-alert p {
+  margin: 0 0 20px 0;
+  color: #333;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.custom-alert .primary-button {
+  background-color: #329843;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-alert .primary-button:hover {
+  background-color: #267733;
+}
+
+.slogan {
+  color: #329843; /* Green color */
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.menu-icon {
+  font-size: 36px; /* Keep icon size large */
+}
+
+.my-recipes-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.my-recipes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.recipes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.recipe-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.recipe-item:hover {
+  background: #eeeeee;
+}
+
+.recipe-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.recipe-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.recipe-calories {
+  color: #666;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background: rgba(220, 53, 69, 0.1);
+}
+
+/* Style for the Previous Day and Next Day buttons */
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button,
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  background-color: #329843 !important;  /* Green background */
+  color: white !important;
+}
+
+/* Style for the Previous Day and Next Day buttons on hover */
+.react-calendar__navigation__prev-button:hover,
+.react-calendar__navigation__next-button:hover,
+.react-calendar__navigation__prev2-button:hover,
+.react-calendar__navigation__next2-button:hover {
+  background-color: #267733 !important;  /* Darker green on hover */
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .menu-list {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .header-banner {
+  direction: rtl;
+}
+
+/* Add more RTL-specific styles as needed */
+
+.ingredients-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.ingredient-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: flex-end;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.add-row-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+.add-row-btn:hover {
+  background-color: #218838;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #dc3545;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #dc3545; /* Red color for the icon */
+}
+
+.cancel-btn {
+  background-color: #dc3545; /* Red color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px 0;
+  width: 100%;
+  font-size: 16px;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+

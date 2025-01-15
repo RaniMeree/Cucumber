@@ -1,0 +1,10 @@
+{
+  "appId": "com.yourapp.app",
+  "appName": "YourAppName",
+  "webDir": "build",
+  "server": {
+    "androidScheme": "https",
+    "url": "https://5acb-213-103-146-5.ngrok-free.app/home",
+    "cleartext": true
+  }
+}

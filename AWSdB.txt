@@ -1,0 +1,4 @@
+db name: storedb
+username: ranimeree
+pass: !R9a8n4i!
+port: 3306

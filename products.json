@@ -1,0 +1,14 @@
+{
+    "1": {
+        "name": "Milk",
+        "price": 20.0,
+        "price_type": "2",
+        "campaigns": []
+    },
+    "2": {
+        "name": "Meat",
+        "price": 20.0,
+        "price_type": "5",
+        "campaigns": []
+    }
+}
