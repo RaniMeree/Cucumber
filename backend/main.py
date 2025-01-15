@@ -99,16 +99,14 @@ class UserRegistration(BaseModel):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000",
-    "https://localhost:3000",
-    "http://localhost:8000",
-    "https://localhost:8000",
-    "https://*.ngrok-free.app",
-    "http://*.ngrok-free.app",
-    "http://7ef5-213-103-146-5.ngrok-free.app",
-    "https://7ef5-213-103-146-5.ngrok-free.app",
-    "http://5acb-213-103-146-5.ngrok-free.app",
-    "https://5acb-213-103-146-5.ngrok-free.app",],  # Add your frontend URL
+    allow_origins=[
+        "https://cucumber-ckr93nlro-rani-merees-projects.vercel.app",  # Add your Vercel domain
+        "https://cucumber.vercel.app",  # Add any other variations of your domain
+        "http://localhost:3000",
+        "https://localhost:3000",
+        "http://localhost:8000",
+        "https://localhost:8000",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=[
@@ -116,7 +114,8 @@ app.add_middleware(
         "Authorization",
         "Accept",
         "Origin",
-        "ngrok-skip-browser-warning"
+        "ngrok-skip-browser-warning",
+        "Access-Control-Allow-Origin"
     ],
 )
 
