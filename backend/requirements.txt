@@ -2,17 +2,12 @@ fastapi
 uvicorn
 pydantic
 sqlalchemy
-shutil
-os
 bcrypt
 passlib
 jose
 Pillow
-warnings
 spacy
 typing-extensions
-sys
-io
 openai
 base64
 starlette
@@ -20,10 +15,7 @@ asyncio
 json
 pandas
 fuzzywuzzy
-re
 email-verification
-random
-string
 slowapi
 mysql-connector-python
 # Add other Python dependencies 
