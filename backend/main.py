@@ -565,43 +565,7 @@ def calculate_required_calories(weight, height, age, gender, activity, goal):
 
     return daily_calories
 
-@app.get("/get_user/{user_id}")
-async def get_user(user_id: int, db: Session = Depends(get_db)):
-    user = db.query(User).filter(User.id == user_id).first()
-    if not user:
-        raise HTTPException(status_code=404, detail="User not found")
-    return {
-        "id": user.id,
-        "username": user.username,
-        "email": user.email,
-        "weight": user.weight,
-        "height": user.height,
-        "age": user.age,
-        "gender": user.gender,
-        "activity": user.activity,
-        "goal": user.goal,
-        "requiredCalories": user.requiredCalories
-    }
 
-# Initialize the model and processor
-try:
-    print("Loading food detection model...")
-    model_name = "nateraw/food"  # This is specifically trained on food images
-    extractor = AutoFeatureExtractor.from_pretrained(model_name)
-    model = ResNetForImageClassification.from_pretrained(model_name)
-    model.eval()
-    print("Model loaded successfully")
-except Exception as e:
-    logger.error(f"Error loading model: {str(e)}")
-    raise
-
-model = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
-processor = CLIPProcessor.from_pretrained("openai/clip-vit-base-patch32")
-
-# Initialize OpenAI client (add your API key to environment variables)
-client = OpenAI(api_key="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")
-
-DEFAULT_LANGUAGE = "en"
 
 # Helper function to get language from headers
 def get_language(accept_language: Optional[str] = Header(None)) -> str:
