@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-pydantic
+pydantic[email]
 sqlalchemy
 bcrypt
 passlib
@@ -16,4 +16,5 @@ fuzzywuzzy
 email-verification
 slowapi
 mysql-connector-python
+python-Levenshtein
 # Add other Python dependencies 
