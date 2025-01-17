@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException, UploadFile, File, Depends, Header, Request
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
-import sqlite3
 from fastapi.middleware.cors import CORSMiddleware
 import logging
 from sqlalchemy import create_engine, Column, Integer, String, Float, text, DateTime, ForeignKey, Boolean

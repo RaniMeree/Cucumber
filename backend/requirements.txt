@@ -1,7 +1,6 @@
 fastapi
 uvicorn
 pydantic
-sqlite3
 sqlalchemy
 shutil
 os
@@ -9,11 +8,7 @@ bcrypt
 passlib
 jose
 Pillow
-torch
-torchvision
-transformers
 warnings
-difflib
 spacy
 typing-extensions
 sys
