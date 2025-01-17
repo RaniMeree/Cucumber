@@ -121,7 +121,7 @@ async def options_token():
 
 # Define the database path
 DATABASE_PATH = r"C:\Users\ranimeree\Desktop\APP\myapp\storeDB.db"
-DATABASE_URL = "mysql://ranimeree:!R9a8n4i@store.c3a2sw62odx9.eu-north-1.rds.amazonaws.com:3306/storedb"  # Adjust credentials
+DATABASE_URL = "mysql+mysqlconnector://ranimeree:!R9a8n4i@store.c3a2sw62odx9.eu-north-1.rds.amazonaws.com:3306/storedb"  # Adjust credentials
 
 engine = create_engine(
     DATABASE_URL,
