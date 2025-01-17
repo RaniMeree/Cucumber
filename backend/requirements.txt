@@ -9,7 +9,6 @@ Pillow
 spacy
 typing-extensions
 openai
-base64
 starlette
 asyncio
 json
