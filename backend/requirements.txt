@@ -17,4 +17,5 @@ email-verification
 slowapi
 mysql-connector-python
 python-Levenshtein
+python-multipart
 # Add other Python dependencies 
