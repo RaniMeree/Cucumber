@@ -1055,9 +1055,7 @@ text_language_prompt = {
     "ku": "ئەم خواردنە چەند کالۆری هەیە بۆ هەر گرامێک: {food_name}؟ تکایە بە ناوی خواردنەکە و کالۆری بۆ هەر گرامێک وەڵام بدەوە، بە کۆما جیا کراوەتەوە. بۆ نموونە: 'ناوی خواردن، 2.5 کالۆری/گرام'. ئەگەر ئەمە خواردن نییە، وەڵام بدەوە 'ئەمە خواردن نییە'."
 }
 
-# Load the CSV file
-csv_file_path = os.path.join(os.path.dirname(__file__), 'nutrition.csv')
-nutrition_data = pd.read_csv(csv_file_path)
+
 
 def find_nutritional_values(food_description):
     # Use fuzzy matching to find the closest match
