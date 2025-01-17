@@ -4,7 +4,7 @@ pydantic
 sqlalchemy
 bcrypt
 passlib
-jose
+python-jose
 Pillow
 spacy
 typing-extensions
