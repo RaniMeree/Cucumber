@@ -25,3 +25,5 @@ yarn-error.log*
 # Add these lines to your .gitignore
 __pycache__/
 *.pyc
+
+.vercel

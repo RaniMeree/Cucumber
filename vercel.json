@@ -9,37 +9,19 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": { 
-        "distDir": "build"
+        "distDir": "build",
+        "buildCommand": "npm run build --legacy-peer-deps"
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/backend/main.py",
-      "headers": {
-        "Access-Control-Allow-Credentials": "true",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-        "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization"
-      }
-    },
-    {
-      "src": "/token",
-      "dest": "/backend/main.py",
-      "headers": {
-        "Access-Control-Allow-Credentials": "true",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-        "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization"
-      }
-    },
-    {
-      "handle": "filesystem"
+      "dest": "backend/main.py"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "build/$1"
     }
   ]
 } 
